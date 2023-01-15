@@ -1,0 +1,49 @@
+{
+  "pack": {
+    "files": [
+      {
+        "type": "image",
+        "key": "background",
+        "url": "assets/images/background.png"
+      },
+      {
+        "type": "spritesheet",
+        "key": "ground",
+        "url": "assets/images/ground-sprite.png",
+        "frameConfig": {
+          "frameWidth": 1032,
+          "frameHeight": 111
+        }
+      },
+      {
+        "type": "image",
+        "key": "control-hint",
+        "url": "assets/images/control-hint.png"
+      },
+      {
+        "type": "image",
+        "key": "restart-button",
+        "url": "assets/images/restart-button.png"
+      },
+      {
+        "type": "spritesheet",
+        "key": "bird",
+        "url": "assets/images/bird-sprite.png",
+        "frameConfig": {
+          "frameWidth": 34,
+          "frameHeight": 24
+        }
+      },
+      {
+        "type": "image",
+        "key": "pipe-upper",
+        "url": "assets/images/pipe-upper.png"
+      },
+      {
+        "type": "image",
+        "key": "pipe-lower",
+        "url": "assets/images/pipe-lower.png"
+      }
+    ]
+  }
+}

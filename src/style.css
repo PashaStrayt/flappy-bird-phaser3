@@ -1,0 +1,54 @@
+@font-face {
+  font-family: "Flappy Bird Regular";
+  src: url("../assets/font/letters.eot.eot");
+  /* IE9*/
+  src: url("../assets/font/letters.eot.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */
+    url("../assets/font/letters.eot.woff2") format("woff2"),
+    /* chrome、firefox */
+    url("../assets/font/letters.eot.woff") format("woff"),
+    /* chrome、firefox */
+    url("../assets/font/letters.eot.ttf") format("truetype"),
+    /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url("../assets/font/letters.eot.svg#Flappy Bird Regular") format("svg");
+  /* iOS 4.1- */
+}
+
+@font-face {
+  font-family: 'Digits';
+  src: url('../assets/font/digits.eot');
+  src: url("../assets/font/digits.eot?#iefix") format("embedded-opentype"),
+  /* IE6-IE8 */
+  url("../assets/font/digits.woff2") format("woff2"),
+  /* chrome、firefox */
+  url("../assets/font/digits.woff") format("woff"),
+  /* chrome、firefox */
+  url("../assets/font/digits.ttf") format("truetype"),
+  /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url("../assets/font/digits.svg#Flappy Bird Regular") format("svg");
+}
+
+
+body {
+  margin: 0px;
+
+  font-family: "Flappy Bird Regular";
+}
+
+#app {
+  height: 100vh;
+
+  background: linear-gradient(180deg, #00C1CC 0%, #E2FCD8 59.9%, #E1D993 86.98%);
+  overflow-x: hidden;
+}
+
+h1 {
+  font-family: "Digits";
+
+  position: absolute;
+  opacity: 0;
+}
+
+canvas {
+  border: 3px solid rgba(0, 0, 0, 0.607);
+}
