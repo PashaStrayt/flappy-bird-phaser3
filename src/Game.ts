@@ -110,7 +110,7 @@ export class Game extends Phaser.Scene {
     this.scoreText.setVisible(true);
 
     this.bird.startFlying();
-    this.time.delayedCall(100, () => this.isBirdFalling = true);
+    this.time.delayedCall(400, () => this.isBirdFalling = true);
 
     this.pipeCreator = this.time.addEvent({
       delay: 1400,

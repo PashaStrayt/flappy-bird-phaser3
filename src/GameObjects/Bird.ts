@@ -37,15 +37,17 @@ export class Bird extends Phaser.Physics.Arcade.Sprite {
     // Set jump velocity
     this.setVelocityY(-320);
 
-    // Rotate up, but not more than 30 degrees
-    if (this.angle > -30) {
-      const avaliableAngle: number = this.angle - 30;
+    // Rotate up
+    if (this.angle > -26) {
+      this.angle = -30;
 
-      if (avaliableAngle < -30) {
-        this.angle = -30;
-      } else {
-        this.angle = avaliableAngle;
-      }
+      // const avaliableAngle: number = this.angle - 30;
+
+      // if (avaliableAngle < -30) {
+      //   this.angle = -30;
+      // } else {
+      //   this.angle = avaliableAngle;
+      // }
     }
   }
 
