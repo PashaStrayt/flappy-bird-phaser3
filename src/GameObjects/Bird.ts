@@ -4,6 +4,9 @@ import { assetsKeys, config } from "shared";
 
 const ANIMATION_KEY = 'flying-bird';
 
+const FALLING_SPEED = 380;
+const JUMP_SPEED = 380;
+
 export class Bird extends Phaser.Physics.Arcade.Sprite {
   constructor(scene: Phaser.Scene) {
     super(scene, config.width / 2 - 90, config.height / 2 - 45, assetsKeys.bird);
@@ -27,7 +30,7 @@ export class Bird extends Phaser.Physics.Arcade.Sprite {
     this.setCollideWorldBounds(true);
 
     // Set gravity velocity
-    this.setGravityY(380);
+    this.setGravityY(FALLING_SPEED);
 
     // Make initial jump
     this.flap();
@@ -35,10 +38,10 @@ export class Bird extends Phaser.Physics.Arcade.Sprite {
 
   public flap(): void {
     // Set jump velocity
-    this.setVelocityY(-320);
+    this.setVelocityY(-JUMP_SPEED);
 
     // Rotate up
-    if (this.angle > -26) {
+    if (this.angle > -30) {
       this.angle = -30;
 
       // const avaliableAngle: number = this.angle - 30;

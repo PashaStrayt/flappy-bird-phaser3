@@ -7,6 +7,13 @@ const MAX_BLOCKS_AMOUNT = 12;
 const BLOCK_HEIGHT = 41;
 const HOLE_HEIGHT_IN_BLOCKS = 4;
 
+const FALL_DELAY = 400;
+const PIPE_TRANSIT_TIME = 500;
+const PIPE_CREATION_INTERVAL = 1400;
+const PIPE_REMOVAL_INTERVAL = 8000;
+
+const PIPE_VELOCITY = 200;
+
 export class Game extends Phaser.Scene {
   private isGameOver: boolean;
   private isGameStarted: boolean;
@@ -77,7 +84,7 @@ export class Game extends Phaser.Scene {
     });
     this.scoreText.setOrigin(0.5).setDepth(1).setVisible(false);
 
-    // Set collisions between bird and ground, pipes
+    // Set collisions between bird, ground and pipes
     this.physics.add.collider(this.ground, this.bird).collideCallback = this.killGame.bind(this);
     this.physics.add.collider(this.pipes, this.bird).collideCallback = this.killGame.bind(this);
   }
@@ -99,7 +106,7 @@ export class Game extends Phaser.Scene {
     // Case where the game continues
     else if (this.isGameStarted && !this.isGameOver) {
       this.isBirdFalling = false;
-      this.time.delayedCall(400, () => this.isBirdFalling = true);
+      this.time.delayedCall(FALL_DELAY, () => this.isBirdFalling = true);
 
       this.bird.flap();
     }
@@ -110,26 +117,25 @@ export class Game extends Phaser.Scene {
     this.scoreText.setVisible(true);
 
     this.bird.startFlying();
-    this.time.delayedCall(400, () => this.isBirdFalling = true);
+    this.time.delayedCall(FALL_DELAY, () => this.isBirdFalling = true);
 
     this.pipeCreator = this.time.addEvent({
-      delay: 1400,
-      callback: this.createPipe.bind(this, 1024),
+      delay: PIPE_CREATION_INTERVAL,
+      startAt: PIPE_TRANSIT_TIME,
+      callback: this.createPipe.bind(this, config.width),
       loop: true
     });
 
     this.pipeKiller = this.time.addEvent({
-      delay: 8000,
+      delay: PIPE_REMOVAL_INTERVAL,
       callback: this.killPipe.bind(this),
       loop: true
     });
 
-    this.time.delayedCall(500, () => {
-      this.scoreUpdater = this.time.addEvent({
-        delay: 1400,
-        callback: this.incrementScore.bind(this),
-        loop: true
-      });
+    this.scoreUpdater = this.time.addEvent({
+      delay: PIPE_CREATION_INTERVAL,
+      callback: this.incrementScore.bind(this),
+      loop: true
     });
   }
 
@@ -171,9 +177,9 @@ export class Game extends Phaser.Scene {
     }
 
     new Pipe(this, this.pipes, x, BLOCK_HEIGHT * holeBlockIndex, assetsKeys.pipes.upper, 'upper');
-    new Pipe(this, this.pipes, x, BLOCK_HEIGHT * (holeBlockIndex + 4), assetsKeys.pipes.lower, 'lower');
+    new Pipe(this, this.pipes, x, BLOCK_HEIGHT * (holeBlockIndex + HOLE_HEIGHT_IN_BLOCKS), assetsKeys.pipes.lower, 'lower');
 
-    this.pipes.setVelocityX(-200);
+    this.pipes.setVelocityX(-PIPE_VELOCITY);
   }
 
   private killPipe(): void {
