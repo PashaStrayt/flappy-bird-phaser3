@@ -1,0 +1,59 @@
+{
+  "pack": {
+    "files": [
+      {
+        "type": "image",
+        "key": "background",
+        "url": "https://psv4.userapi.com/c237131/u172817402/docs/d13/d9a9c16a08d9/background.png?extra=5DPBL3qyAMku8RL2-IawoFxVBmNMZs-Gw3iGOC02KzA1cGm_phA7hg8dGrglNquf8WzW7XJY7VWgtVuCAzj24CmKeGeocEjFU7nzSlOeYnF8jMeTeTX2kiUR0Pb68aOC0JJIXdSlBfGinh0e5-osx-3g6g"
+      },
+      {
+        "type": "image",
+        "key": "collision",
+        "url": "https://vk.com/doc172817402_653313210?hash=v1un8POs9vVJJhMIgsZkji7bzOZGe9tmI6Z9wRkduFc&dl=QfcOPAFaTM7wsgN5eWIZq6QrxEJs0KLZFZ6ywv6Loms"
+      },
+      {
+        "type": "image",
+        "key": "ground-sprite",
+        "url": "https://psv4.userapi.com/c235031/u172817402/docs/d30/38d50cb15d0a/ground-sprite.png?extra=yGZ21yg8OwAU-MMlt8c3re7KxmV9x8LyJSwFbIO6kMiIoR_3QgiddlcqzLHmzx18_0Pv8-7Yfhx5WolUNVCfNjuerGMIAaxiR1eUKlbBEcTsh48XW0bBPsfQx77BjSEpW4E3UoR1ecPGR0phhq4O4ZSo9g",
+        "frameConfig": {
+          "frameWidth": 1024,
+          "frameHeight": 106
+        }
+      },
+      {
+        "type": "image",
+        "key": "control-hint",
+        "url": "https://psv4.userapi.com/c235031/u172817402/docs/d36/cf4d3cc547b3/control-hint.png?extra=cIhnE01hrmXvzF9YtP1n4IA0pN-nl2obc0SjQPuKiwzEep29Ea6_JRZA4beKw4M8wGji0gBO67lcd1NJedMM5XWdaCwGXrjlVRqajbkByxxM6ws2qRLpKbnwxVQzq5snYc6Jweac9zUMDvVzia4l4oxPRw"
+      },
+      {
+        "type": "image",
+        "key": "game-over",
+        "url": "https://psv4.userapi.com/c235031/u172817402/docs/d21/bfbc7037ba72/game-over.png?extra=fupWPGB8tJEeXvDKWeLW8z49dt8w-UkWe_4T4ZnxvQFxPqxOmGIUWxXTLW2FC4DjAJoC0wlEYxgw1twhhbLNgoMXcTGz92aq7WU2GQhGx8zPHn2ln4u_Vh_6UqcMWjwgTarFMsmFpGOXDwQWSuVjHiSpQA"
+      },
+      {
+        "type": "image",
+        "key": "restart-button",
+        "url": "https://psv4.userapi.com/c235031/u172817402/docs/d30/d1978ce740bf/restart-button.png?extra=amx1pYdlLJPbO-flApHZShiFkyX6NWn82rJmT3iGAfU_KEy32NTEBzA6ho0stsAlZTlaFMIk_n4EE6h0RO8MoeI2oFpwjnpCEopIkHh2SEsHY3WQg1zCuH96obwuA0t2BeiqvxF_x6Wjv7Y-LTcB9UOeWw"
+      },
+      {
+        "type": "spritesheet",
+        "key": "bird",
+        "url": "https://psv4.userapi.com/c235031/u172817402/docs/d52/e40fb8a95b38/chicken-sprite.png?extra=e04LKCztBNNNJpnczB1jkYcZ1NA7aWG4Zuv8H0RRVcfhNo4eQ5XfSl6uH6drJPJgFkYXJ4CvznU4KgSnTT_-6Bok-u-o-fTAeCqA0VFLd_sS5PtNhOor9uH1COQkbsKW3EEO99jEEk3vpaKDcRqZw8Qj5w",
+        "frameConfig": {
+          "frameWidth": 150,
+          "frameHeight": 107
+        }
+      },
+      {
+        "type": "image",
+        "key": "pipe-upper",
+        "url": "https://psv4.userapi.com/c235031/u172817402/docs/d9/4e392f985424/pipe-upper.png?extra=B9EkQwlWmt9PJPez2OZLl-QZIagt1JLESO9aD6MccWwNOs9znMClbn-Re3G94zylA-RagZx6zXngK-BwPzVKCjglMEMJ8nvYU9jA1qKteexCtc7sgajoIHTqCtLLQH4Bc8X7JnURZP0in4k5CAs-u3YAYw"
+      },
+      {
+        "type": "image",
+        "key": "pipe-lower",
+        "url": "https://psv4.userapi.com/c235031/u172817402/docs/d28/a827bdc786cf/pipe-lower.png?extra=BdfPDwFqxTe12XUTsLfEo2kSQ5sIgbUIwPRWEcK6TfPfPZO3usSK6ceLM4tt9KacvNCRKiNC6Dvgf75NQHvbTVaZSdGywlf67cyRKFCM9ILAGEwPWB3INEVKALhpEPf8TIMe4phu7xHbGViFNEshAVttjg"
+      }
+    ]
+  }
+}
